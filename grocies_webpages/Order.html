@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries Online</title>
+    <link rel="stylesheet" href="../grocies_stylesheets/style07.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Groceries☻</div>
+            <div class="spacer"></div>
+            <div class="search-container">
+                <input type="text" placeholder="Search product" class="search-bar">
+                <button class="search-button">Search</button>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Order</a></li>
+                <li><a href="#">Loyalty</a></li>
+                <li class="dropdown">
+                    <label for="dropdown-toggle">Products</label>
+                    <input type="checkbox" id="dropdown-toggle">
+                    <div class="dropdown-content">
+                        <a href="#vegetables">Vegetables</a>
+                        <a href="#dairy">Dairy Products</a>
+                        <a href="#cosmetics">Cosmetics & Skincare</a>
+                    </div>
+                </li>
+            </ul>
+        </nav> 
+    </header><br><br><br><br><br>
+    <main>
+        <div class="background">
+            <div class="checkout-wrapper">
+                <h1>Product Order Form</h1><br><br>
+                <form class="checkout-form">
+                    <div class="billing-address">
+                        <h2>Billing Address</h2>
+                        <label for="full-name">Full Name :</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="John Doe">
+
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="example@example.com">
+
+                        <label for="address">Address :</label>
+                        <input type="text" id="address" name="address" placeholder="Room - Street - Locality">
+
+                        <label for="city">City :</label>
+                        <input type="text" id="city" name="city" placeholder="Mumbai">
+
+                        <div class="state-zip">
+                            <div>
+                                <label for="state">State :</label>
+                                <input type="text" id="state" name="state" placeholder="India">
+                            </div>
+                            <div>
+                                <label for="zip-code">Zip Code :</label>
+                                <input type="text" id="zip-code" name="zip-code" placeholder="123456">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="vegetables" class="order-section">
+                        <h2>Order Vegetables</h2>
+                        <label for="vegetables-quantity">Quantity (kg) :</label>
+                        <input type="number" id="vegetables-quantity" name="vegetables-quantity" min="0" placeholder="0">
+                    </div><br><br>
+
+                    <div id="dairy" class="order-section">
+                        <h2>Order Dairy Products</h2>
+                        <label for="dairy-quantity">Quantity (units) :</label>
+                        <input type="number" id="dairy-quantity" name="dairy-quantity" min="0" placeholder="0">
+                    </div><br><br>
+
+                    <div id="cosmetics" class="order-section">
+                        <h2>Order Cosmetics & Skincare</h2>
+                        <label for="cosmetics-quantity">Quantity (units) :</label>
+                        <input type="number" id="cosmetics-quantity" name="cosmetics-quantity" min="0" placeholder="0">
+                    </div><br><br>
+
+                    <div class="payment">
+                        <h2>Payment</h2>
+                        <p>Accepted Cards :</p><br>
+                        <div class="accepted-cards">
+                            <img src="../grocies_images/Order_img/paypal_order.png" alt="PayPal">
+                            <img src="../grocies_images/Order_img/mastercard_order.png" alt="MasterCard">
+                            <img src="americanexpress.png" alt="American Express">
+                            <img src="visa.png" alt="Visa">
+                        </div><br><br>
+
+                        <label for="name-on-card">Name On Card :</label>
+                        <input type="text" id="name-on-card" name="name-on-card" placeholder="Mr. John Doe">
+
+                        <label for="card-number">Credit Card Number :</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="1111-2222-3333-4444">
+
+                        <div class="exp-cvv">
+                            <div>
+                                <label for="exp-month">Exp Month :</label>
+                                <input type="text" id="exp-month" name="exp-month" placeholder="January">
+                            </div>
+                            <div>
+                                <label for="exp-year">Exp Year :</label>
+                                <input type="text" id="exp-year" name="exp-year" placeholder="2022">
+                            </div>
+                            <div>
+                                <label for="cvv">CVV :</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="1234">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="checkout-btn">Proceed To Checkout</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#vegetables">Vegetables</a></li>
+                        <li><a href="#dairy">Dairy</a></li>
+                        <li><a href="#cosmetics">Cosmetics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Order</a></li>
+                        <li><a href="#">Loyalty</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Payment Methods</h3>
+                    <ul>
+                        <li><a href="#">Credit/Debit Cards</a></li>
+                        <li><a href="#">PayPal</a></li>
+                        <li><a href="#">Net Banking</a></li>
+                        <li><a href="#">Cash on Delivery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Download the App</h3>
+                    <div class="app-links">
+                        <a href="#"><img src="app-store.png" alt="App Store"></a>
+                        <a href="#"><img src="google-play.png" alt="Google Play"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Groceries☻. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

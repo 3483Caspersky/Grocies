@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocies Online</title>
+    <link rel="stylesheet" href="../grocies_stylesheets/style03.css">
+</head>
+<body>
+    <header>
+            <nav class="navbar">
+                <div class="logo">Grocies☻</div>
+                <div class="spacer"></div> <!-- Spacer -->
+                <div class="search-container">
+                    <input type="text" placeholder="Search product" class="search-bar">
+                    <button class="search-button">Search</button>
+                </div>
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Loyalty</a></li>
+                    <li class="dropdown">
+                        <label for="dropdown-toggle">Products</label>
+                        <input type="checkbox" id="dropdown-toggle">
+                        <div class="dropdown-content">
+                            <a href="#">Vegetables</a>
+                            <a href="#">Dairy Products</a>
+                            <a href="#">Cosmetics<br>& Skincare</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+       
+         <br><br>
+    </header>
+    <br><br>
+    <main>
+     
+    
+    <div class="container">
+        <div class="loyalty-registration">
+            <h2 class="benefits1">Loyalty Registration Form</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required> <br><br>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select> <br><br>
+
+                <label for="nic">NIC Number:</label>
+                <input type="text" id="nic" name="nic" required><br><br>
+
+                <label for="address">Home Address:</label>
+                <input type="text" id="address" name="address" required><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required><br><br>
+
+                <label for="loyalty-scheme">Choose Loyalty Scheme:</label>
+                <select id="loyalty-scheme" name="loyalty-scheme">
+                    <option value="basic">Basic</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select> <br><br>
+
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <section class="benefits">
+        <br>
+        <h2>Loyalty Program Benefits</h2>
+        
+            <strong>Basic Scheme:</strong> 5% discount on groceries. <br>
+            <strong>Silver Scheme:</strong> 10% discount on groceries + Free home delivery. <br>
+            <strong>Gold Scheme:</strong> 15% discount on groceries + Free home delivery + Exclusive access to special events.
+        
+        <br><br><br>
+    </section>
+         <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Vegetables</a></li>
+                    <li><a href="#">Dairy</a></li>
+                    <li><a href="#">Cosmetics</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Loyalty</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Payment Methods</h3>
+                <ul>
+                    <li><a href="#">Credit/Debit Cards</a></li>
+                    <li><a href="#">PayPal</a></li>
+                    <li><a href="#">Net Banking</a></li>
+                    <li><a href="#">Cash on Delivery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Download the App</h3>
+                <div class="app-links">
+                    <a href="#"><img src="app-store.png" alt="App Store"></a>
+                    <a href="#"><img src="google-play.png" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Grocies☻. All rights reserved.</p>
+        </div>
+    </footer>
+    </main>
+   
+</body>
+</html>
