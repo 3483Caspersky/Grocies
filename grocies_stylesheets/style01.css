@@ -198,6 +198,12 @@ background-color:black;
     background: black;
 
 }
+.hero-image{
+  width: 100%;
+  height: 100%;
+  vertical-align: baseline;
+
+}
 
 .hero-container{
     display: grid;
@@ -250,12 +256,7 @@ button:hover{
 
 }
 
-.hero-image{
-    width: 100%;
-    height: 100%;
-    vertical-align: baseline;
 
-}
 
 @media screen and (max-width:768px){
     .hero-container{
@@ -452,7 +453,7 @@ p.style{
 }
 
 p.gradient{
-    background: linear-gradient(to right, #00FF00, #FFFF00, #FFFFFF);
+    background: linear-gradient(green,yellowgreen,white);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
@@ -547,8 +548,7 @@ img.align1{
     
 }
 .why-choose ol {
-    list-style-type: decimal;
-    float:right;
+    list-style-type: decimal; 
     margin-top:0;
     margin-right: 60px;
     margin-left: 100px;
@@ -556,7 +556,7 @@ img.align1{
   }
 
 /*footer section*/
-
+  
 .footer {
     background-color: #333;
     color: white;

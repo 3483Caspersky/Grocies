@@ -139,7 +139,8 @@ body {
         margin: 10px 0;
     }
     #menu-toggle:checked + .nav-links {
-        display: flex;
+        display:none;
+
     }
     .search-bar {
         width: 80%;
