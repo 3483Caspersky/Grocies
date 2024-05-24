@@ -28,7 +28,7 @@ body{
   font-weight: bold;
   color: black;
   font-style: italic;
-  margin-right: 20px; /* Add margin to create space */
+  margin-right: 20px; 
 }
 
 .search-container {
@@ -42,7 +42,7 @@ body{
   border: 1px solid #ccc;
   border-radius: 3px;
   width: 500px;
-  margin-right: 2px; /* Add margin to create space */
+  margin-right: 2px; 
 }
 
 .search-button {
@@ -78,7 +78,7 @@ body{
 }
 
 .nav-links li {
-  margin: 0 10px; /* Adjust margin here */
+  margin: 0 10px; 
   position: relative;
 }
 
@@ -98,7 +98,7 @@ body{
 }
 
 .nav-links li:last-child {
-  margin-right: 50px; /* Add margin to the last tab */
+  margin-right: 50px; 
 }
 
 .dropdown-content {
@@ -195,6 +195,8 @@ body{
   }
 }
 
+/*Main section*/
+
 .banner {
   width: 100%;
   
@@ -206,12 +208,29 @@ body{
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.bottom_banner{
-  width: 50%;
-  margin-left: 365px;
-  border-radius: 20px;
-  border-style: groove;
-  border-width: 5px;
+
+.bottom_banner {
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+  display: block;
+  border-radius: 20px; 
+  border-style: groove; 
+  border-width: 5px; 
+}
+
+@media (min-width: 769px) {
+  .bottom_banner {
+      width: 50%; 
+      margin: 0 auto; 
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom_banner {
+      width: 90%; 
+      margin: 0 auto; 
+  }
 }
 
 /*footer section*/

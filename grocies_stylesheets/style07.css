@@ -1,6 +1,4 @@
-/* External CSS - style.css */
 
-/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,7 +26,7 @@ body {
     font-weight: bold;
     color: black;
     font-style: italic;
-    margin-right: 20px; /* Add margin to create space */
+    margin-right: 20px; 
 }
 
 .search-container {
@@ -42,7 +40,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 3px;
     width: 500px;
-    margin-right: 2px; /* Add margin to create space */
+    margin-right: 2px; 
 }
 
 .search-button {
@@ -78,7 +76,7 @@ body {
 }
 
 .nav-links li {
-    margin: 0 10px; /* Adjust margin here */
+    margin: 0 10px; 
     position: relative;
 }
 
@@ -98,7 +96,7 @@ body {
 }
 
 .nav-links li:last-child {
-    margin-right: 50px; /* Add margin to the last tab */
+    margin-right: 50px; 
 }
 
 .dropdown-content {
@@ -164,7 +162,8 @@ body {
     }
 }
 
-/* Checkout Form */
+/* Main Section */
+
 .background {
     display: flex;
     justify-content: center;
@@ -180,7 +179,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px; /* Increased max-width for larger screens */
+    max-width: 800px; 
     width: 100%;
 }
 
@@ -266,8 +265,9 @@ input[type="text"], input[type="email"], input[type="password"] {
 }
 
 /* Footer section */
+
 .footer {
-    background-color: #444; /* Changed the color to #444 */
+    background-color: #444; 
     padding: 20px;
     color: white;
 }
@@ -298,7 +298,7 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 .footer-column ul li a {
     text-decoration: none;
-    color: white; /* Changed to white for better contrast */
+    color: white; 
 }
 
 .footer-column .app-links a img {

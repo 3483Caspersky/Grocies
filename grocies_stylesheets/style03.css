@@ -5,15 +5,27 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image:url(../grocies_images/Loyalty_img/img1_loyalty.jpeg);
+  background-image: url(../grocies_images/Loyalty_img/img1_loyalty.jpeg);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
-  
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 0;
+    padding: 0;
+    background-image: url(../grocies_images/Loyalty_img/mobile_background.jpg); /* New background image for mobile */
+    background-size: cover; 
+    background-attachment: scroll; 
+  }
 }
 
 
@@ -33,7 +45,7 @@ body {
   font-weight: bold;
   color: black;
   font-style: italic;
-  margin-right: 20px; /* Add margin to create space */
+  margin-right: 20px; 
 }
 
 .search-container {
@@ -47,7 +59,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 3px;
   width: 500px;
-  margin-right: 2px; /* Add margin to create space */
+  margin-right: 2px;
 }
 
 .search-button {
@@ -83,7 +95,7 @@ body {
 }
 
 .nav-links li {
-  margin: 0 10px; /* Adjust margin here */
+  margin: 0 10px; 
   position: relative;
 }
 
@@ -103,7 +115,7 @@ body {
 }
 
 .nav-links li:last-child {
-  margin-right: 50px; /* Add margin to the last tab */
+  margin-right: 50px; 
 }
 
 .dropdown-content {
@@ -200,14 +212,14 @@ body {
   }
 }
 
+/*Main section*/
 
 .container {
   margin-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
+  padding: 20px; 
 }
 
 .loyalty-registration {
@@ -215,11 +227,12 @@ body {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  width: 100%;
+  max-width: 800px; 
 }
 
 form {
-  margin: 50px;
-  
+  margin: 0; 
 }
 
 label {
@@ -248,13 +261,34 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-  
 }
 
 input[type="submit"]:hover {
   background-color: #45a049;
 }
 
+.benefits1 {
+  text-shadow: 1px 1px 2px black; 
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: bisque;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .container {
+      margin-top: 50px; 
+      padding: 10px; 
+  }
+
+  .loyalty-registration {
+      width: 90%; 
+  }
+
+  form {
+      margin: 20px 0; 
+  }
+}
 .benefits {
   margin: 40px;
   text-align: center;
@@ -267,21 +301,7 @@ input[type="submit"]:hover {
   margin-bottom: 20px;
 }
 
-input[type="text"] {
-  width: 500px; 
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  border-style:groove;
-}
 
-.benefits1{
-  text-shadow:black;
-  font-size: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: bisque;
-  font-weight: 300;
-}
 
 /*footer section*/
 
