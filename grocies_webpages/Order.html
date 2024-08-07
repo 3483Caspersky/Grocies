@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groceries Online</title>
-    <link rel="stylesheet" href="../grocies_stylesheets/style07.css">
-    <link rel="icon" href="../favicon/favicon.ico">
+    <title>Grocies Online</title>
+    <link rel="stylesheet" href="../grocies_stylesheets/style03.css">
+    <link rel="icon" href="../favicon/favicon.ico"> 
 </head>
 <body>
- <!--Header Section -->
+    <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="logo">Grocies☻</div>
@@ -27,153 +27,552 @@
                 <li><a href="../grocies_webpages/homepage.html">Home</a></li>
                 <li><a href="../grocies_webpages/about.html">About Us</a></li>
                 <li><a href="../grocies_webpages/Order.html">Order</a></li>
-                <li><a href="../grocies_webpages/Loyalty Registration.html">Loyalty</a></li>
+                <li><a href="../grocies_webpages/Checkout.html">Checkout</a></li>
                 <li class="dropdown">
                     <label for="dropdown-toggle">Products</label>
                     <input type="checkbox" id="dropdown-toggle">
                     <div class="dropdown-content">
                         <a href="../grocies_webpages/Vegetables.html" target="_blank">Vegetables</a>
                         <a href="../grocies_webpages/Dairy products.html" target="_blank">Dairy Products</a>
-                        <a href="../grocies_webpages/cosmetics.html" target="_blank">Cosmetics<br>& Skincare</a>
+                        <a href="../grocies_webpages/cosmetics.html" target="_blank">Cosmetics & Skincare</a>
                     </div>
                 </li>
             </ul>
-        </nav> 
+        </nav>
     </header>
- <!--Main Section -->
-    
-    <main>
-        <div class="background">
-            <div class="checkout-wrapper">
-                <h1>Product Order Form</h1><br><br>
-                <form class="checkout-form">
-                    <div class="billing-address">
-                        <h2>Billing Address</h2>
-                        <label for="full-name">Full Name :</label>
-                        <input type="text" id="full-name" name="full-name" placeholder="Omesha Samaraweera">
 
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" placeholder="omisam2004@gmail.com">
+    <!-- Main Order Section -->
+   
+   <main>
+    <section class="ban">
+        <img src="../grocies_images/Order_img/banner-order.jpg" alt="banner" class="ban">
+    </section><br><br>
+    <section>
+        <p class="style1"> <b>ORDER NOW !</b> <br><br>
+            Discover a world of flavors at your fingertips. Stock up on juicy fruits, crisp vegetables, creamy dairy, fresh meat and seafood, and all your baking and cooking needs. Easy online ordering for hassle-free shopping.
 
-                        <label for="address">Address :</label>
-                        <input type="text" id="address" name="address" placeholder="Room - Street - Locality">
-
-                        <label for="city">City :</label>
-                        <input type="text" id="city" name="city" placeholder="Colombo">
-
-                        <div class="state-zip">
-                            <div>
-                                <label for="state">State :</label>
-                                <input type="text" id="state" name="state" placeholder="Sri Lanka">
-                            </div>
-                            <div>
-                                <label for="zip-code">Zip Code :</label>
-                                <input type="text" id="zip-code" name="zip-code" placeholder="123456">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="vegetables" class="order-section">
-                        <h2>Order Vegetables</h2>
-                        <label for="vegetables-quantity">Quantity (kg) :</label>
-                        <input type="number" id="vegetables-quantity" name="vegetables-quantity" min="0" placeholder="0">
-                    </div><br><br>
-
-                    <div id="dairy" class="order-section">
-                        <h2>Order Dairy Products</h2>
-                        <label for="dairy-quantity">Quantity (units) :</label>
-                        <input type="number" id="dairy-quantity" name="dairy-quantity" min="0" placeholder="0">
-                    </div><br><br>
-
-                    <div id="cosmetics" class="order-section">
-                        <h2>Order Cosmetics & Skincare</h2>
-                        <label for="cosmetics-quantity">Quantity (units) :</label>
-                        <input type="number" id="cosmetics-quantity" name="cosmetics-quantity" min="0" placeholder="0">
-                    </div><br><br>
-
-                    <div class="payment">
-                        <h2>Payment</h2>
-                        <p>Accepted Cards :</p><br>
-                        <div class="accepted-cards">
-                            <img src="../grocies_images/Order_img/paypal_order.png" alt="PayPal">
-                            <img src="../grocies_images/Order_img/mastercard_order.png" alt="MasterCard">
-                            <img src="../grocies_images/Order_img/americanexpress_order.png" alt="American Express">
-                            <img src="../grocies_images/Order_img/visa_order.png" alt="Visa">
-                        </div><br><br>
-
-                        <label for="name-on-card">Name On Card :</label>
-                        <input type="text" id="name-on-card" name="name-on-card" placeholder="Ms. Omesha Samaraweera">
-
-                        <label for="card-number">Credit Card Number :</label>
-                        <input type="text" id="card-number" name="card-number" placeholder="1111-2222-3333-4444">
-
-                        <div class="exp-cvv">
-                            <div>
-                                <label for="exp-month">Exp Month :</label>
-                                <input type="text" id="exp-month" name="exp-month" placeholder="December">
-                            </div>
-                            <div>
-                                <label for="exp-year">Exp Year :</label>
-                                <input type="text" id="exp-year" name="exp-year" placeholder="2026">
-                            </div>
-                            <div>
-                                <label for="cvv">CVV :</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="1234">
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="checkout-btn">Proceed To Checkout</button>
-                </form>
-            </div>
+        </p>
+    </section> <br><br>
+    <!--fruits section-->
+    <h2 class="sticky inset">FRUITS</h2> <br><br>
+    <form id="order-form">         
+    <div class="container" >
+      
+          <div class="card">
+              <div class="card-image card-1"></div>
+              <h2>Strawberries</h2>
+              <h4>Rs 560.00/Kg </h4>
+              <h4 class="styling">In Stock</h4>
+              <input type="hidden" name="itemName1" value="Strawberries">              
+              <input type="hidden" name="price1" value="560.00">
+              <input type="number" name="quantity1" class="quantity-input"  placeholder="Select Quantity">
+              <button type="submit" class="order-button">Add to Cart</button>
+              
+          </div>
+      
+          <div class="card">
+            <div class="card-image card-2"></div>
+            <h2>Mango</h2>
+            <h4>Rs 120.00/Kg </h4>
+            <h4 class="styling">In Stock</h4>
+            <input type="hidden" name="itemName2" value="Mango">
+            <input type="hidden" name="price2" value="120.00">
+            <input type="number" name="quantity2" class="quantity-input" placeholder="Select Quantity">
+            <button type="submit" class="order-button">Add to Cart</button>
         </div>
+                              
+        <div class="card">
+         <div class="card-image card-3"></div>
+         <h2>Grape</h2>
+         <h4>Rs 750.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName3" value="Grape">
+         <input type="hidden" name="price3" value="750.00">
+         <input type="number" name="quantity3" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+     </div>
+
+     <div class="card">
+      <div class="card-image card-4"></div>
+      <h2>Pomegranate</h2>
+      <h4>Rs 1100.00/Kg </h4>
+      <h4 class="styling">In Stock</h4>
+      <input type="hidden" name="itemName4" value="Pomegranate">
+      <input type="hidden" name="price4" value="750.00">
+      <input type="number" name="quantity4" class="quantity-input" placeholder="Select Quantity">
+      <button type="submit" class="order-button">Add to Cart</button>
+  </div>
+
+  <div class="card">
+   <div class="card-image card-5"></div>
+   <h2>Mangosteen</h2>
+   <h4>Rs 630.00/Kg </h4>
+   <h4 class="styling">In Stock</h4>
+   <input type="hidden" name="itemName5" value="Mangosteen">
+   <input type="hidden" name="price5" value="630.00">
+   <input type="number" name="quantity5" class="quantity-input" placeholder="Select Quantity">
+   <button type="submit" class="order-button">Add to Cart</button>
+</div>
+
+<div class="card">
+   <div class="card-image card-6"></div>
+   <h2>Watermelon</h2>
+   <h4>Rs 250.00/Kg </h4>
+   <h4 class="styling">In Stock</h4>
+   <input type="hidden" name="itemName6" value="Watermelon">
+   <input type="hidden" name="price6" value="250.00">
+   <input type="number" name="quantity6" class="quantity-input" placeholder="Select Quantity">
+   <button type="submit" class="order-button">Add to Cart</button>
+</div>
+    
+<div class="card">
+   <div class="card-image card-7"></div>
+   <h2>Apple</h2>
+   <h4>Rs 265.00/Kg </h4>
+   <h4 class="styling">In Stock</h4>
+   <input type="hidden" name="itemName7" value="Apple">
+   <input type="hidden" name="price7" value="265.00">
+   <input type="number" name="quantity7" class="quantity-input" placeholder="Select Quantity">
+   <button type="submit" class="order-button">Add to Cart</button>
+</div>
+<div class="card">
+   <div class="card-image card-8"></div>
+   <h2>Pineapple</h2>
+   <h4>Rs 312.00/Kg </h4>
+   <h4 class="styling">In Stock</h4>
+   <input type="hidden" name="itemName8" value="Pineapple">
+   <input type="hidden" name="price8" value="312.00">
+   <input type="number" name="quantity8" class="quantity-input" placeholder="Select Quantity">
+   <button type="submit" class="order-button">Add to Cart</button>
+</div>
+      
+      
+        <!--Vegetables section-->
+    </section> <br><br>
+    <h2 class="sticky inset">VEGETABLES</h2> <br><br>
+    <section class="container">
+      
+      <div class="card">
+         <div class="card-image card-9"></div>
+         <h2>Capsicum</h2>
+         <h4>Rs 480.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName9" value="Capsicum">
+         <input type="hidden" name="price9" value="480.00">
+         <input type="number" name="quantity9" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-10"></div>
+         <h2>Corn</h2>
+         <h4>Rs 960.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName10" value="Corn">
+         <input type="hidden" name="price10" value="960.00">
+         <input type="number" name="quantity10" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-11"></div>
+         <h2>Onion</h2>
+         <h4>Rs 630.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName11" value="Onion">
+         <input type="hidden" name="price11" value="630.00">
+         <input type="number" name="quantity11" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-12"></div>
+         <h2>Pumpkin</h2>
+         <h4>Rs 150.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName12" value="Mangosteen">
+         <input type="hidden" name="price12" value="150.00">
+         <input type="number" name="quantity12" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-13"></div>
+         <h2>Potato</h2>
+         <h4>Rs 110.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName13" value="Potato">
+         <input type="hidden" name="price13" value="110.00">
+         <input type="number" name="quantity13" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-14"></div>
+         <h2>Red Cabbage</h2>
+         <h4>Rs 630.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName14" value="Red Cabbage">
+         <input type="hidden" name="price14" value="630.00">
+         <input type="number" name="quantity14" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-15"></div>
+         <h2>Tomato</h2>
+         <h4>Rs 265.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName15" value="Tomato">
+         <input type="hidden" name="price15" value="265.00">
+         <input type="number" name="quantity15" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-16"></div>
+         <h2>Salad Leaves</h2>
+         <h4>Rs 318.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName16" value="Salad Leaves">
+         <input type="hidden" name="price16" value="318.00">
+         <input type="number" name="quantity16" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+   
+        
+             <!--Dairy Products section-->
+    </section> <br><br>
+    <h2 class="sticky inset">DAIRY PRODUCTS</h2> <br><br>
+    <section class="container">
+      
+      <div class="card">
+         <div class="card-image card-17"></div>
+         <h2>Hershey's Syrup</h2>
+         <h4>Rs 1600.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName17" value="Hershey's Syrup">
+         <input type="hidden" name="price17" value="1600.00">
+         <input type="number" name="quantity17" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-18"></div>
+         <h2>Blue Cheese</h2>
+         <h4>Rs 2100.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName18" value="Blue Cheese">
+         <input type="hidden" name="price18" value="2100.00">
+         <input type="number" name="quantity18" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-19"></div>
+         <h2>Fresh Milk</h2>
+         <h4>Rs 450.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName19" value="Fresh Milk">
+         <input type="hidden" name="price19" value="450.00">
+         <input type="number" name="quantity19" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-20"></div>
+         <h2>Dairy Milk Choc</h2>
+         <h4>Rs 670.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName20" value="Dairy Milk Choc">
+         <input type="hidden" name="price20" value="670.00">
+         <input type="number" name="quantity20" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-21"></div>
+         <h2>Happy Cow Cheese</h2>
+         <h4>Rs 630.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName21" value="Happy Cow Cheese">
+         <input type="hidden" name="price21" value="630.00">
+         <input type="number" name="quantity21" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div> 
+        
+      <div class="card">
+         <div class="card-image card-22"></div>
+         <h2>Kandos Choco Box</h2>
+         <h4>Rs 1300.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName22" value="Kandos Choco Box">
+         <input type="hidden" name="price22" value="1300.00">
+         <input type="number" name="quantity22" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-23"></div>
+         <h2>Imorich Ice Cream</h2>
+         <h4>Rs 510.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName23" value="Imorich Ice Cream">
+         <input type="hidden" name="price23" value="510.00">
+         <input type="number" name="quantity23" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-24"></div>
+         <h2>Frozen Yogurt</h2>
+         <h4>Rs 518.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName24" value="Frozen Yogurt">
+         <input type="hidden" name="price24" value="518.00">
+         <input type="number" name="quantity24" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      
+        
+          <!--MEAT & SEAFOOD section-->
+    </section> <br><br>
+    <h2 class="sticky inset">MEAT & SEAFOOD</h2> <br><br>
+    <section class="container">
+      
+      <div class="card">
+         <div class="card-image card-25"></div>
+         <h2>Whole Chicken</h2>
+         <h4>Rs 916.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName25" value="Whole Chicken">
+         <input type="hidden" name="price25" value="916.00">
+         <input type="number" name="quantity25" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-26"></div>
+         <h2>Tuna Fish</h2>
+         <h4>Rs 780.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName26" value="Tuna Fish">
+         <input type="hidden" name="price26" value="780.00">
+         <input type="number" name="quantity26" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-27"></div>
+         <h2>Prawns</h2>
+         <h4>Rs 1250.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName27" value="Prawns">
+         <input type="hidden" name="price27" value="1250.00">
+         <input type="number" name="quantity27" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-28"></div>
+         <h2>Beef</h2>
+         <h4>Rs 3450.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName28" value="Beef">
+         <input type="hidden" name="price28" value="3450.00">
+         <input type="number" name="quantity28" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-29"></div>
+         <h2>Chicken Drumsticks</h2>
+         <h4>Rs 630.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName29" value="Chicken Drumsticks">
+         <input type="hidden" name="price29" value="630.00">
+         <input type="number" name="quantity29" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-30"></div>
+         <h2>Chicken Sausages</h2>
+         <h4>Rs 430.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName30" value="Chicken Sausages">
+         <input type="hidden" name="price30" value="430.00">
+         <input type="number" name="quantity30" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-31"></div>
+         <h2>Canned Fish</h2>
+         <h4>Rs 265.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName31" value="Canned Fish">
+         <input type="hidden" name="price31" value="265.00">
+         <input type="number" name="quantity31" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-32"></div>
+         <h2>Chicken Meat Balls</h2>
+         <h4>Rs 517.00/Kg </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName32" value="Chicken Meat Balls">
+         <input type="hidden" name="price32" value="517.00">
+         <input type="number" name="quantity32" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      
+      
+          
+          <!--BAKING & COOKING INGREDIENTS section-->   
+    </section> <br><br>
+    <h2 class="sticky inset">BAKING & COOKING INGREDIENTS</h2> <br><br>
+    <section class="container">
+   
+      <div class="card">
+         <div class="card-image card-33"></div>
+         <h2>Baking Soda</h2>
+         <h4>Rs 280.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName33" value="Baking Soda">
+         <input type="hidden" name="price33" value="280.00">
+         <input type="number" name="quantity33" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>  
+      <div class="card">
+         <div class="card-image card-34"></div>
+         <h2>Chilli Powder</h2>
+         <h4>Rs 150.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName34" value="Chilli Powder">
+         <input type="hidden" name="price34" value="150.00">
+         <input type="number" name="quantity34" class="quantity-input" placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-35"></div>
+         <h2>Salt</h2>
+         <h4>Rs 250.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName35" value="Salt">
+         <input type="hidden" name="price35" value="250.00">
+         <input type="number" name="quantity35" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-36"></div>
+         <h2>Cocoa Powder</h2>
+         <h4>Rs 560.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName36" value="Cocoa Powder">
+         <input type="hidden" name="price36" value="560.00">
+         <input type="number" name="quantity36" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-37"></div>
+         <h2>Wheat Flour</h2>
+         <h4>Rs 330.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName37" value="Wheat Flour">
+         <input type="hidden" name="price37" value="330.00">
+         <input type="number" name="quantity37" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-38"></div>
+         <h2>Sugar</h2>
+         <h4>Rs 180.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName38" value="Sugar">
+         <input type="hidden" name="price38" value="180.00">
+         <input type="number" name="quantity38" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-39"></div>
+         <h2>Cinnamon Sticks</h2>
+         <h4>Rs 265.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName39" value="Cinnamon Sticks">
+         <input type="hidden" name="price39" value="265.00">
+         <input type="number" name="quantity39" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      <div class="card">
+         <div class="card-image card-40"></div>
+         <h2>Vanilla Extract</h2>
+         <h4>Rs 350.00/Unit </h4>
+         <h4 class="styling">In Stock</h4>
+         <input type="hidden" name="itemName40" value="Vanilla Extract">
+         <input type="hidden" name="price40" value="350.00">
+         <input type="number" name="quantity40" class="quantity-input"  placeholder="Select Quantity">
+         <button type="submit" class="order-button">Add to Cart</button>
+      </div>
+      
+   </div>  
+</form>
+             <!-- Order Table Section --> <br><br>
+         <h2 class="sticky inset">YOUR ORDER</h2> <br><br>
+<table id="order-table">
+   <thead>
+       <tr>
+           <th>Item</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>Action</th>
+       </tr>
+   </thead>
+   <tbody>
+       <!-- Items will be dynamically added here when selected by the user -->
+   </tbody>
+   <tfoot>
+       <tr>
+           <td colspan="3" id="total-price-label">Total Price</td>
+           <td id="total-price">Rs 0.00</td>
+       </tr>
+   </tfoot>
+</table>
+<div class="order-actions">
+   <button id="buy-now-button">Buy now</button>
+   <button id="save-favourite-button">Add to favourites</button>
+   <button id="apply-favourite-button">Apply favourites</button>
+</div>
+
+    </section>
+        </section>
     </main>
- <!-- Footer Section -->
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="../grocies_webpages/Vegetables.html" target="_blank">Vegetables</a></li>
-                        <li><a href="../grocies_webpages/Dairy products.html" target="_blank">Dairy</a></li>
-                        <li><a href="../grocies_webpages/cosmetics.html" target="_blank">Cosmetics</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Useful Links</h3>
-                    <ul>
-                        <li><a href="../grocies_webpages/homepage.html">Home</a></li>
-                    <li><a href="../grocies_webpages/about.html">About Us</a></li>
-                    <li><a href="../grocies_webpages/Order.html">Order</a></li>
-                    <li><a href="../grocies_webpages/Loyalty Registration.html">Loyalty</a></li>
-                    <li><a href="../grocies_webpages/homepage.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Payment Methods</h3>
-                    <ul>
-                        <li><a href="#">Credit/Debit Cards</a></li>
-                        <li><a href="#">PayPal</a></li>
-                        <li><a href="#">Net Banking</a></li>
-                        <li><a href="#">Cash on Delivery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Download the App</h3>
-                    <div class="app-links">
-                        <a href="#"><img src="../grocies_images/Order_img/app_store.png" alt="App Store"></a>
-                        <a href="#"><img src="../grocies_images/Order_img/google_play.png" alt="Google Play"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Groceries☻. All rights reserved.</p>
-            </div>
-        </footer>
+
+    <!--footer section-->
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>Categories</h3>
+              <ul>
+               <li><a href="../grocies_webpages/Vegetables.html" target="_blank">Vegetables</a></li>
+               <li><a href="../grocies_webpages/Dairy products.html" target="_blank">Dairy</a></li>
+               <li><a href="../grocies_webpages/cosmetics.html" target="_blank">Cosmetics</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Useful Links</h3>
+              <ul>                                                                   
+               <li><a href="../grocies_webpages/homepage.html">Home</a></li>
+               <li><a href="../grocies_webpages/about.html">About Us</a></li>
+               <li><a href="../grocies_webpages/Order.html">Order</a></li>
+               <li><a href="../grocies_webpages/Checkout.html">Checkout</a></li>
+               <li><a href="../grocies_webpages/homepage.html">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Payment Methods</h3>
+              <ul>
+                  <li><a href="#">Credit/Debit Cards</a></li>
+                  <li><a href="#">PayPal</a></li>
+                  <li><a href="#">Net Banking</a></li>
+                  <li><a href="#">Cash on Delivery</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Download the App</h3>
+              <div class="app-links">
+                  <a href="#"><img src="../grocies_images/Dairy_img/app_store.png" alt="App Store"></a>
+                  <a href="#"><img src="../grocies_images/Dairy_img/google_play.png" alt="Google Play"></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Grocies☻. All rights reserved.</p>
+      </div>
+  </footer>    
+
+    <script src="../JavaScript/Script-OrderPage.js"></script>
 </body>
 </html>
-
-<!--Bibliography-->
-
-<!--Top 10 AWS security risks & prevention for 2023 (2023) Snyk. Available at: https://snyk.io/learn/aws-security/aws-security-risks-prevention/ (Accessed: 18 May 2024). -->>
 
