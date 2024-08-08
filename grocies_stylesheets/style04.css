@@ -212,13 +212,13 @@ background-color:black;
     height: 300px;
     object-fit: cover;
     cursor: pointer;
-    transform: 0.2s ease;
+    transition: transform 0.2s ease;
     border-radius: 10px;
     border-style: groove;
     border-width: 7px;
     border-color:yellowgreen;
     border-collapse: collapse;
-    box-shadow: white;
+    box-shadow: 0px 4px 10px white;
 }
 
 .item img:hover{
