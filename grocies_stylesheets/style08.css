@@ -168,6 +168,7 @@ justify-content: center;
 
 h2.inset{
   border-style: inset;
+  z-index: 100;
 }
 
 /*Current order table Section */
