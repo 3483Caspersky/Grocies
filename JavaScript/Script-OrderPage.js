@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Get references to DOM elements
     const orderForm = document.getElementById('order-form');
     const orderTableBody = document.querySelector('#order-table tbody');
     const totalPriceElement = document.getElementById('total-price');
@@ -6,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const saveFavouriteButton = document.getElementById('save-favourite-button');
     const applyFavouriteButton = document.getElementById('apply-favourite-button');
 
-    let orderItems = [];
-    let totalPrice = 0;
+    let orderItems = [];  // Array to store order items
+    let totalPrice = 0;  // Variable to keep track of total price
 //Images of the order page which is linked from the css stylesheet
     const imgSources = {
         1: '../grocies_images/Order_img/strawberry-order.png',
@@ -51,71 +52,73 @@ document.addEventListener('DOMContentLoaded', () => {
         39: '../grocies_images/Order_img/Cinnamon-order.png',
         40: '../grocies_images/Order_img/vanilla-order.png',
     };
-//logic for the form data in order page
+ // Event listener for form submission
     orderForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(orderForm);
-        let itemsAdded = false;
+        event.preventDefault();   // Prevent form from submitting in the traditional way
+        const formData = new FormData(orderForm);  // Gather form data
+        let itemsAdded = false;   // Flag to check if any items were added
 
         for (let i = 1; i <= 40; i++) {
             const itemName = formData.get(`itemName${i}`);
             const quantity = parseFloat(formData.get(`quantity${i}`));
             const price = parseFloat(formData.get(`price${i}`));
-
+             // Check if valid item details are provided
             if (itemName && !isNaN(quantity) && !isNaN(price) && quantity > 0) {
                 const imgSrc = imgSources[i];
-                const unit = i <= 16 || (i >= 25 && i <= 32) ? 'Kg' : 'Units';
+                const unit = i <= 16 || (i >= 25 && i <= 32) ? 'Kg' : 'Units'; // Determine unit type
                 orderItems.push({ imgSrc, itemName, quantity, price, unit });
                 itemsAdded = true;
-
+             // Reset quantity input to its placeholder value
                 const quantityInput = document.querySelector(`input[name="quantity${i}"]`);
                 if (quantityInput) {
                     quantityInput.value = quantityInput.placeholder;
                 }
             }
         }
-//Add to cart popup message 
+         // If items were added, update the order table
         if (itemsAdded) {
             updateOrderTable();
             alert("Your items were added to cart!");
         } else {
-            alert("No items selected!");
+            alert("No items selected!");  // Alert if no items were added
         }
     });
-
+     // Event listener for removing items from the table
     orderTableBody.addEventListener('click', (event) => {
         if (event.target.classList.contains('remove-button')) {
             const index = event.target.dataset.index;
-            orderItems.splice(index, 1);
-            updateOrderTable();
+            orderItems.splice(index, 1);  // Remove item from the array
+            updateOrderTable();  // Update the table
+
         }
     });
-
+    // Event listener for the 'Buy Now' button
     buyNowButton.addEventListener('click', () => {
         localStorage.setItem('orderItems', JSON.stringify(orderItems));
         window.location.href = '../grocies_webpages/Checkout.html';
     });
-
+    // Event listener for the 'Add to Favourites' button
     saveFavouriteButton.addEventListener('click', () => {
         localStorage.setItem('favouriteOrder', JSON.stringify(orderItems));
         alert("Your items were added to favourites!");
     });
-
+    // Event listener for the 'Apply Favourites' button
     applyFavouriteButton.addEventListener('click', () => {
         const favouriteOrder = JSON.parse(localStorage.getItem('favouriteOrder'));
         if (favouriteOrder) {
             orderItems = favouriteOrder;
-            updateOrderTable();
-            populateFormWithFavourites();
+            updateOrderTable();  // Update the order table with favourites
+            populateFormWithFavourites();  // Populate form with favourite items
             alert("Favourite items have been applied to your order!");
         } else {
-            alert("No favourite items found!");
+            alert("No favourite items found!");   // Alert if no favourites were found
+        }
         }
     });
-
+    // Function to update the order table
     function updateOrderTable() {
-        orderTableBody.innerHTML = '';
-        totalPrice = 0;
+        orderTableBody.innerHTML = '';  // Clear the existing table rows
+        totalPrice = 0;  // Reset total price
 
         orderItems.forEach(({ imgSrc, itemName, quantity, price, unit }, index) => {
             const row = document.createElement('tr');
@@ -128,11 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td>Rs ${price.toFixed(2)}</td>
                 <td><button class="remove-button" data-index="${index}">Remove</button></td>
             `;
-            orderTableBody.appendChild(row);
-            totalPrice += price * quantity;
+            orderTableBody.appendChild(row); // Add the row to the table
+            totalPrice += price * quantity; // Update total price
         });
 
-        totalPriceElement.textContent = `Rs ${totalPrice.toFixed(2)}`;
+        totalPriceElement.textContent = `Rs ${totalPrice.toFixed(2)}`; // Display the total price
     }
 
    
@@ -243,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceElement.textContent = `Rs ${totalPrice.toFixed(2)}`;
     }
 });
+// Function to populate the form with favourite items
  function populateFormWithFavourites() {
         orderItems.forEach(({ itemName, quantity, price }, index) => {
             const itemNameInput = document.querySelector(`input[name="itemName${index + 1}"]`);
@@ -250,13 +254,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const priceInput = document.querySelector(`input[name="price${index + 1}"]`);
 
             if (itemNameInput) {
-                itemNameInput.value = itemName;
+                itemNameInput.value = itemName; // Set the item name in the form
             }
             if (quantityInput) {
-                quantityInput.value = quantity;
+                quantityInput.value = quantity; // Set the quantity in the form
             }
             if (priceInput) {
-                priceInput.value = price;
+                priceInput.value = price; // Set the price in the form
             }
         });
     }
